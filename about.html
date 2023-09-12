@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Villa Luka</title>
+    <link rel="icon" href="img/night.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=Your_API_Key&callback=initMap" async defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=Your_API_Key"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="loader">
+      <div class="spinner"></div>
+      <p style="font-size: 32px; padding-top: 16px; color: #8a8066;">Loading...</p>
+    </div>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title"><h1 class="item-nav-brand" style="cursor: auto;" href="#">Villa Luka</h1></span>
+          <div class="mdl-layout-spacer"></div>
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <a class="mdl-navigation__link" href="index.html" style="color: #8a8066; font-size: 24px; transition: color 0.8s ease-in-out;" onmouseover="this.style.backgroundColor='transparent'; this.style.color='#625b49';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#8a8066';">Home</a>
+            <a class="mdl-navigation__link" href="about.html" style="color: #8a8066; font-size: 24px; transition: color 0.8s ease-in-out;" onmouseover="this.style.backgroundColor='transparent'; this.style.color='#625b49';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#8a8066';">About Us</a>
+            <a class="mdl-navigation__link" href="contact.html" style="color: #8a8066; font-size: 24px; transition: color 0.8s ease-in-out;" onmouseover="this.style.backgroundColor='transparent'; this.style.color='#625b49';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#8a8066';">Contact</a>
+            <a class="mdl-navigation__link" href="gallery.html" style="color: #8a8066; font-size: 24px; transition: color 0.8s ease-in-out;" onmouseover="this.style.backgroundColor='transparent'; this.style.color='#625b49';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#8a8066';">Gallery</a>
+            <a class="item-nav-border" href="https://www.booking.com/hotel/hr/villa-luka-zadar1.de.html">Book Now</a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title"><h1 class="item-nav-brand2" style="cursor: auto;" href="#">Villa Luka</h1></span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" style="text-align: center; font-size: 20px; color: #8a8066;" href="index.html" onmouseover="this.style.backgroundColor='#8a8066'; this.style.color='#ffffff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#8a8066';">Home<span style="font-size: 20px; padding-left: 5px;"></span></a>
+          <a class="mdl-navigation__link" style="text-align: center; font-size: 20px; color: #8a8066;" href="about.html" onmouseover="this.style.backgroundColor='#8a8066'; this.style.color='#ffffff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#8a8066';">About Us<span style="font-size: 20px; padding-left: 5px;"></span></a>
+          <a class="mdl-navigation__link" style="text-align: center; font-size: 20px; color: #8a8066;" href="contact.html" onmouseover="this.style.backgroundColor='#8a8066'; this.style.color='#ffffff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#8a8066';">Contact<span style="font-size: 20px; padding-left: 5px;"></span></a>
+          <a class="mdl-navigation__link" style="text-align: center; font-size: 20px; color: #8a8066;" href="gallery.html" onmouseover="this.style.backgroundColor='#8a8066'; this.style.color='#ffffff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#8a8066';">Gallery<span style="font-size: 20px; padding-left: 5px;"></span></a>
+          <a class="item-nav-border" id="item-nav-border2" href="https://www.booking.com/hotel/hr/villa-luka-zadar1.de.html">Book Now</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+            <div class="head-aboutUs-part">
+                <h2>About Us</h2>
+                <img class="img-header-about" style="border-bottom: 0.5px solid #000;" src="img/bedroom1.jpg" alt="header" draggable="false">
+            </div>
+            <div class="abouUs-index-container">
+              <div class="about-image-part">
+                <img class="entrance-about-img" src="img/entrance1.jpg" alt="image">
+              </div>
+              <div class="about-description-part">
+                <h1>About Villa Luka Zadar</h1>
+                <hr>
+                <p>
+                  Step into Villa Luka's wonderful world, a place designed for your perfect escape<br>
+                  in Croatia. We're all about creating amazing experiences and making your stay<br>
+                  memorable. Our warm hospitality and dedication to your enjoyment set us apart.<br>
+                  <br>
+                  Our comfy and stylish accommodations cater to all tastes. Whether you're looking<br>
+                  for peace, adventure, or a change of pace, we've got you covered.<br>
+                  <br>
+                  Come enjoy Villa Luka's charm, where Croatia's beauty and our friendly atmosphere<br>
+                  combine for an unforgettable experience. It's a chance to relax, have fun, and<br>
+                  soak in the stunning surroundings.
+                </p>
+              </div>
+            </div>
+            <div class="places-attractions-container">
+              <div class="places-container">
+                <h2>Places Of Attractions</h2>
+                <hr style="width: 84%;">
+                <div class="category-grid">
+                  <div class="category active" id="airports">Airports</div>
+                  <div class="category" id="beaches">Beaches</div>
+                  <div class="category" id="restaurants">Restaurants</div>
+                  <div class="category" id="attractions">Top Attractions</div>
+                </div>
+                <div class="category-content" id="content">
+                  <li style="margin-left: 50px; padding: 14px;">Airport Zadar - 5 km</li>
+                  <li style="margin-left: 50px; padding: 14px;">Airport Split - 92 km</li>
+                  <li style="margin-left: 50px; padding: 14px;">Airport Losinj - 98 km</li>
+                </div>
+              </div>
+              <div class="attractions-container">
+                <img class="bathroom-about-img" src="img/bathroom1.jpg" alt="image">
+              </div>
+            </div>
+            <div class="accordion-container">
+              <h3>FAQs About Villa Luka</h3>
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Is the accommodation Villa Luka popular with families?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Yes, accommodation Villa Luka is popular among guests who book family stays.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Is there a private pool available for guests inside the Villa Luka accommodation?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Certainly, there is a private pool available for guests to use at Villa Luka.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            What are the check-in and check-out times at Villa Luka accommodation?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Check-in at the accommodation Villa Luka is from 15:00, and check-out is until 11:00.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            How much does the stay in the Villa Luka cost?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Prices at Villa Luka accommodation could vary depending on the stay (e.g. selected period, hotel policy, etc.). If you enter your data, you can see the prices on booking.com.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            What activities does the accommodation Villa Luka offer?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            The accommodation Villa Luka offers the following activities/services (fees may apply): Fitness center, cycling, hiking, children's playground, diving, table tennis, fishing, canoeing, windsurfing, water park, beach, pool, bike rental, horse riding, aerobics, ...
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            How many bedrooms does the accommodation Villa Luka have?
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Accommodation Villa Luka has the following number of bedrooms:<br>
+                            - Bedroom 1: 1 double bed<br>
+                            - Bedroom 2: 1 double bed<br>
+                            - Bedroom 3: 1 double bed<br>
+                            - Bedroom 4: 1 large double bed<br>
+                            - Living room: 1 sofa bed<br>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            Does the accommodation Villa Luka have a terrace?
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Yes, there are options with terrace at this accommodation. More about this and other facilities at the accommodation Villa Luka you can find on this page.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                            How far is the accommodation Villa Luka from the center of Zadar?
+                        </button>
+                    </h2>
+                    <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Accommodation Villa Luka is located 14 km from the center of Zadar. All distances are measured as the crow flies. The actual driving distance may differ.
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>        
+            <footer class="mdl-mini-footer" style="background-color: #363636;">
+                <div class="mdl-mini-footer__left-section">
+                  <div class="mdl-logo">Villa Luka</div>
+                </div>
+                <div class="mdl-mini-footer__middle-section">
+                  <ul class="mdl-mini-footer__link-list">
+                    <h1>Contact Us</h1>
+                    <li><a href="mailto:lukagambiraza1987@gmail.com"><i class="fas fa-envelope"></i> lukagambiraza1987@gmail.com</a></li>
+                    <li><a href="https://villaluka.site"><i class="fas fa-globe"></i> villaluka.site</a></li>
+                    <li><a href="tel:+4915735722837"><i class="fas fa-phone"></i> +385 91 893 5672</a></li>
+                    <li>
+                      <p><i class="fas fa-map-marker-alt"></i> Ulica Svetog Ante 8, Debeljak, 23206 Zadar, Croatia</p>
+                    </li>
+                  </ul>
+                  <p class="mdl-p-rights">All rights reserved. Villa Luka © 2023</p>
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2431.263850885972!2d15.369887016147658!3d44.0375291687552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4761e7c6b0a5c9c5%3A0xe5a386a7e8f5a69b!2sVilla%20Luka!5e1!3m2!1sde!2sfr!4v1693164696418!5m2!1sde!2sfr" width="400" height="300" style="border: 0; padding-right: 100px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </footer>
+        </div>
+      </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
